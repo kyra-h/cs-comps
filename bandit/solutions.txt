@@ -145,3 +145,6 @@ bandit6@bandit:~$ find
 ./.bashrc
 ./.bash_logout
 bandit6@bandit:~$ 
+
+
+cat ./.profile, ./.bashrc, ./.bash_logout are confusing
