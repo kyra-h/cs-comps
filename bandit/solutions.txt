@@ -132,6 +132,11 @@ https://man7.org/linux/man-pages/man1/du.1.html
 
 Level 6 -> Level 7:
 
+How to solve:
+cd ..
+du -a
+
+Notes:
 
 bandit6@bandit:~$ du -a -b
 807	./.profile
@@ -148,3 +153,25 @@ bandit6@bandit:~$
 
 
 cat ./.profile, ./.bashrc, ./.bash_logout are confusing
+cat ~/.profile
+
+
+ls -a -l
+du -a | grep bandit7 
+--> it says no :(
+
+
+bandit6@bandit:/home/bandit7$ du -a --bytes
+4184396	./data.txt
+807	./.profile
+3771	./.bashrc
+220	./.bash_logout
+4193290	.
+
+
+file data.txt
+data.txt: regular file, no read permission
+
+resources used:
+https://man7.org/linux/man-pages/man1/ls.1.html 
+https://mayadevbe.me/posts/overthewire/bandit/level7/ 
