@@ -1,0 +1,147 @@
+Kyra Helmbold
+
+Level 0:
+password: bandit0
+
+how to get:
+$ ssh -p 2220 bandit0@bandit.labs.overthewire.org
+ 
+ * some stuff*
+
+bandit0@bandit.labs.overthewire.org's password: 
+bandit0
+
+
+Level 0 -> Level 1:
+password: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+how to get:
+bandit0@bandit:~$ cat readme
+
+
+Level 1 -> Level 2:
+password: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+how to get:
+bandit1@bandit:~$ cat ./-
+
+I used the find command to find that the - file could also be accessed with a ./
+bandit1@bandit:~$ find
+
+
+Level 2 -> Level 3
+password: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+how to get:
+bandit2@bandit:~$ cat "spaces in this filename"
+
+
+Level 3 -> Level 4:
+password: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+how to get:
+bandit3@bandit:~$ ls
+inhere
+bandit3@bandit:~$ cd inhere
+bandit3@bandit:~/inhere$ ls
+bandit3@bandit:~/inhere$ find
+.
+./.hidden
+bandit3@bandit:~/inhere$ cat ./.hidden
+
+Level 4 -> Level 5:
+password: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+how to get:
+cd into inhere, type cat ./-file07
+
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ cd inhere
+bandit4@bandit:~/inhere$ find
+.
+./-file01
+./-file02
+./-file08
+./-file06
+./-file00
+./-file04
+./-file05
+./-file07
+./-file03
+./-file09
+bandit4@bandit:~/inhere$ cat ./-file01
+7L3??Y?ͯ	Ŵ????E?Y?ܚ	?V&??h?F?bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file02
+??y???O̫??`?\?-⃐?Hx??2??Kbandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file08
+???K?~?+??9"T???*Z$???"?r?
+?bandit4@bandit:~/inhere$ cat ./-file06
+G=1???????B׃?"
+              ???W??9ؽ5bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file0-
+cat: ./-file0-: No such file or directory
+bandit4@bandit:~/inhere$ cat ./-file00
+QRrtZ?i?	?H
+                  |??ȧ????^??bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file04
+??gQ??eE}:?g???j8??????<.?ebandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file05
+??S܁?e 0?????]7???????b?<?~bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+
+Level 5 -> Level 6:
+password: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+how to get:
+
+bandit5@bandit:~$ cd inhere
+bandit5@bandit:~/inhere$ du --bytes -a
+4821	./maybehere14/.file3
+871	./maybehere14/spaces file2
+8351	./maybehere14/-file2
+4282	./maybehere14/-file1
+
+...
+
+1033	./maybehere07/.file2
+
+... 
+
+7186	./maybehere19/spaces file1
+4740	./maybehere19/.file2
+54678	./maybehere19
+888462	.
+
+
+bandit5@bandit:~/inhere$ cat ./maybehere07/.file2
+
+
+cd into inhere
+bandit5@bandit:~/inhere$ du -b
+(The above gets the size in bytes of all the subdirectories/file)
+
+bandit5@bandit:~/inhere/maybehere14$ du -a
+(The above gets all the subdirectories and things)
+
+resources used:
+https://man7.org/linux/man-pages/man1/du.1.html 
+
+
+Level 6 -> Level 7:
+
+
+bandit6@bandit:~$ du -a -b
+807	./.profile
+3771	./.bashrc
+220	./.bash_logout
+8894	.
+bandit6@bandit:~$ ls
+bandit6@bandit:~$ find
+.
+./.profile
+./.bashrc
+./.bash_logout
+bandit6@bandit:~$ 
