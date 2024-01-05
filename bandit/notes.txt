@@ -1,0 +1,15 @@
+SSH: $ ssh -p 2220 bandit0@bandit.labs.overthewire.org 
+
+Get the files and their sizes: du --bytes -a 
+
+Find command: can search for files with certain attributes: 
+find -user bandit7 -group bandit6 
+
+Grep command: grep millionth data.txt
+
+Piping: sort uniq.txt | uniq -u
+
+Base64 cmd useful 
+
+For gzip compressed files the header is \x1F\x8B\x08
+Bzip: 425a
