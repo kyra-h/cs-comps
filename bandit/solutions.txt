@@ -248,3 +248,4 @@ password:
 how to get:
 
 resources used:
+https://www.howtogeek.com/427805/how-to-use-the-strings-command-on-linux/ 
