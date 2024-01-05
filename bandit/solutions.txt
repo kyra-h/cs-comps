@@ -228,6 +228,7 @@ cat data.txt, cmd + f "===", look for readable strings...
 notes:
 it looks like you can't grep == signs normally 
 need to use -i tag? no need --text tag
+strings txt 
 
 resources used:
 https://stackoverflow.com/questions/23512852/grep-binary-file-matches-how-to-get-normal-grep-output
@@ -251,7 +252,8 @@ cat data.txt | tr 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' 'nopqrs
 -- definitely a better way to do this
 
 use tr 
-cat uniq.txt | tr 'a' '1'
+cat uniq.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+tr [a-z] [z-a]
 
 resources used:
 https://www.howtogeek.com/427805/how-to-use-the-strings-command-on-linux/

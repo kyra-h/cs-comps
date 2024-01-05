@@ -6,6 +6,7 @@ Find command: can search for files with certain attributes:
 find -user bandit7 -group bandit6 
 
 Grep command: grep millionth data.txt
+--> global regular expression print
 
 Piping: sort uniq.txt | uniq -u
 
@@ -13,3 +14,20 @@ Base64 cmd useful
 
 For gzip compressed files the header is \x1F\x8B\x08
 Bzip: 425a
+
+
+class notes:
+tr
+2>/dev/null
+find
+vim --> :q
+decode (base64 -d)
+can use readable flag in find (access)
+
+bandit 4->5
+
+cat ./-f* 
+strings ./-f* 
+
+file ./-*
+--> better than file * 
