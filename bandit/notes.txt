@@ -31,3 +31,18 @@ strings ./-f*
 
 file ./-*
 --> better than file * 
+
+
+nc localhost 30000
+
+nc bandit.labs.overthewire.org 30000 (doesn't work)7
+
+ps auxww 
+(get who is logged in?)
+
+nc hostport:
+1. make a tcp connection to the remote server host/port
+2. wait for stdin/kb input, send along to the server
+3. print anything the server sends back
+
+does basically the same thing as ssh

@@ -313,6 +313,13 @@ Level 13 -> Level 14
 password:
 
 how to solve:
+--> save sshkey.private to my machine
+scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private .
+--> change perms so others cannot read this file or do anything (chmod 700 sshkey.private)
+
+login w/ this key:
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+
 
 bandit13@bandit:~$ cat sshkey.private
 -----BEGIN RSA PRIVATE KEY-----
@@ -344,4 +351,41 @@ kAWpXbv5tbkkzbS0eaLPTKgLzavXtQoTtKwrjpolHKIHUz6Wu+n4abfAIRFubOdN
 -----END RSA PRIVATE KEY-----
 
 
-resources used: 
+resources used: https://mayadevbe.me/posts/overthewire/bandit/level14/
+
+
+Level 14 -> Level 15
+password: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+how to solve:
+
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+bandit14@bandit:~$ nc localhost 30000
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+Correct!
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+
+
+bandit14@bandit:~$ cd .ssh
+bandit14@bandit:~/.ssh$ ls
+authorized_keys
+bandit14@bandit:~/.ssh$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGSQ4TzdbZw5PshaEVz1o9ppCZAN2DO5cK/6mlkdr75u5KQ36CDS1yvsXDw0sZrn5TN5zasSDRaZ568HXcAihinQxnIROrjq36OT2m43BnAi31eAFm58a1kTBZsVbD+9Us3A5cF7hRZK0ZFbOA+kR5K/lNvVWMtkgF0amFMgrbYCbPpltOEyyIyfIlp8TAn9Pw9A7ebJL3W9QcS6g4wDOhQgPiQ3QwRnf5dqHIrQclWrrwqxU5t59cbW+8DcYAnb2TElqq9F+BiepmvJY3vDcIeM1Thz/YmSn6fwvRKfFo0D5ZgDuOI/JMXSKzy7MyVhDiXUvOH/z8ym+EJAXyvbZ3 rudy@localhost
+
+
+Level 15 -> Level 16
+password: JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+how to get:
+openssl s_client -connect localhost:30001
+openssl s_client localhost:30001
+
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+Correct!
+JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+resources used:
+https://mayadevbe.me/posts/overthewire/bandit/level16/
