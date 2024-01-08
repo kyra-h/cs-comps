@@ -46,3 +46,9 @@ nc hostport:
 3. print anything the server sends back
 
 does basically the same thing as ssh
+
+
+cat /etc/cron.d.cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+chmod 644
+cat /etc/bandit_pass/bandit22 > tmp/t706 ... 

@@ -1,0 +1,13 @@
+Make things insecure:
+- set permissions wrong
+- openly available passwords
+    - using obscurity (e.g. weird locations to store secret info)
+    - put secret info in hidden files (ls -a vs ls)
+- crackable passwords
+- no limit to # password guesses
+- not changing defaults (kali/kali)
+- git stuff (accidentally add config file w/ uname and password)
+    - secrets in old commits 
+    - secrets in tags and log messages
+- cron-related stuff
+- not cleaning input?
