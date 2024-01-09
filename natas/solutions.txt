@@ -1,0 +1,69 @@
+Level 0:
+Username: natas0
+Password: natas0
+URL:      http://natas0.natas.labs.overthewire.org
+
+
+Level 0 -> Level 1
+Username: natas1
+Password: g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
+URL:      http://natas1.natas.labs.overthewire.org
+
+inspect:  /html/body/div[1]
+<!--The password for natas1 is g9D9cREhslqBKtcA2uocGHPfMZVzeFK6 -->
+
+
+Level 1 -> Level 2:
+Username: natas3
+URL:      http://natas3.natas.labs.overthewire.org
+
+(I made a shortcut to the inspector tool)
+inspect:
+/html/body/div[1]/
+<!--The password for natas2 is h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7 -->
+
+
+Level 2-> Level 3
+Username: natas3
+Password:G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+URL:      http://natas3.natas.labs.overthewire.org
+
+I found pixel.png: http://natas2.natas.labs.overthewire.org/files/pixel.png
+by right clicking where I saw that in inspect. 
+
+Now I went to: http://natas2.natas.labs.overthewire.org/files/
+Oh look there is a users.txt:
+# username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+natas3:G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH
+
+
+Tests
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-09 08:06 CST
+Nmap scan report for natas.labs.overthewire.org (51.20.46.118)
+Host is up (0.13s latency).
+rDNS record for 51.20.46.118: ec2-51-20-46-118.eu-north-1.compute.amazonaws.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 65.15 seconds
+
+I tried to ssh and I got:
+!!! You are trying to log into this SSH server on port 22, which is not intended.
+
+Resources Used: 
+https://blog.certcube.com/overthewire-natas/
+
+Level 3 -> Level 4:
+Username: natas4
+Password:
+URL:      http://natas4.natas.labs.overthewire.org
+
+
+https://natas4.natas.labs.overthewire.org
