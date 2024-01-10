@@ -19,6 +19,31 @@ Class notes Jan 10 2024
         - click on lock , see where request is too, click off, will switch ports, back to http from https. 
         - http history under proxy tab
         - can change cookies
+        - curl http://cs338.jeffondich.com/ -v --proxy http://127.0.0.1:8080/ 
+        - goes to burpsuite ! (8080 using burpsuite as a proxy)
+
+- HTTP:
+    - POST is typical for form
+    - after blank line at bottom, there are a bunch of name:value pairs. This is related to post. Can edit before forwarding. Can teach intruder to try lots of passwords: exactly same post but run through list of passwds. 
+    - When a website has a form tag, it is by default going to use the POST verb to retrieve the response. 
+    - Data located in the input fields gets included in POST info @ bottom of request. Can get curl to get this info.
 
 - Where are cookies?
     - cd Library/Application\ Support/Google/Chrome
+
+- php 
+<?php  
+    $user = $_REQUEST['user'];
+    $user2 = $_GET['user'];
+    $user3 = $_POST['user];
+    echo "hello there, $user/$user2/#user3";
+?>
+- output goes to client, browser that requested.
+- you don't see this code, you see the output... unless.. browser wasn't configured right so you can read people's php. This is bad.
+- variables start with $
+- can do interpolated strings, with variables in string.
+- $_ = superglobal. No matter where you are in php, have access to this variable. (kinda dangerous but ok...)
+- js uses object for dictionaries, php calls them arrays
+
+
+- if I go to the url, say ?user=Jeff in url. 
