@@ -1,0 +1,78 @@
+USING CURL
+curl is a powerful HTTP and HTTPS client that we'll use a lot this term. Here are some very simple things to try to get started with curl.
+
+Use a normal web browser to visit http://cs338.jeffondich.com/.
+In a terminal (macos Terminal, Linux Terminal, Windows cmd or Powershell, etc.), try this:
+
+curl http://cs338.jeffondich.com/
+Now try:
+
+curl -v http://cs338.jeffondich.com/
+What does the -v do? What does v stand for in this context?
+--> verbose
+
+SET UP A TRIVIAL HTTP SERVER
+In Kali, create a folder and stick some random files in it. Could be leftover programs from a previous class, text files you just make for this exercise, or whatever. I'm going to assume that one of the files in this folder is named moose.txt, because of course I am.
+In a Kali terminal, cd to your new folder and run this command:
+
+python3 -m http.server 80
+In a different Kali terminal, run this command:
+
+ip addr
+This command's output should show you the IP address by which your host computer (e.g., your macOS or Windows laptop) knows the Kali VM. At the moment, my Kali is at 172.16.41.134. Yours might be a 172.16.*.* or 10.10.*.* or 192.168.*.* or some address from one of the other "local network" address blocks.
+
+Use a normal web browser on your host machine to access http://YOUR_KALI_IP_ADDRESS/moose.txt. Do you see what you expect?
+http://192.168.64.4/cat.txt 
+Yes. 
+
+At a command prompt on your host computer, do this:
+
+curl -v http://YOUR_KALI_IP_ADDRESS/moose.txt
+What happens? Look in both the curl terminal and the python3 terminal.
+* Connected to 192.168.64.4 (192.168.64.4) port 80 (#0)
+> GET /cat.txt HTTP/1.1
+> Host: 192.168.64.4
+> User-Agent: curl/7.79.1
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: SimpleHTTP/0.6 Python/3.11.4
+< Date: Mon, 08 Jan 2024 18:04:02 GMT
+< Content-type: text/plain
+< Content-Length: 4
+< Last-Modified: Mon, 08 Jan 2024 18:01:17 GMT
+< 
+{ [4 bytes data]
+100     4  100     4    0     0    299      0 --:--:-- --:--:-- --:--:--   800
+* Closing connection 0
+
+Try:
+
+curl -v http://YOUR_KALI_IP_ADDRESS/moose.txt > moose.txt
+What's different about the results?
+output goes to cat.txt (doesn't display contents)
+
+Look back at the HTTP header information in the past two bullet points. What name does the python3 web server use for itself?
+APACHE INSTEAD OF PYTHON3
+Apache is one of the most successful open-source projects ever, and is an extremely widely used web server (including, for example, by cs.carleton.edu).
+
+For this exercise, you're going to launch Apache as a web server on Kali, and access it from your host system.
+
+Put some random files (say, including moose.txt) in /var/www/html on Kali. That folder is the default root directory for Apache web files.
+If you haven't already, go to your python3 terminal and Ctrl-C to kill the simple web server.
+Launch apache2:
+
+sudo systemctl start apache2
+Try accessing moose.txt (or whatever) via a web browser and curl -v on your host machine. Does Apache work as expected? What name does Apache use for itself?
+Copy to /var/www/html a file named test.php with these contents:
+
+<?php
+    echo "Hello there";
+?>
+Access test.php from your host system (browser and/or curl). What do you see? What do you think Apache is doing when you ask it for a PHP file?
+Shut down Apache:
+sudo systemctl stop apache2
+NEXT...
+We'll start serving bad PHP code from Apache to make attackers feel welcome.

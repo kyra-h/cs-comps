@@ -1,0 +1,24 @@
+Class notes Jan 10 2024
+
+- presentation = informal
+    - teach class about SQL injections
+    - ~ 10 mins long
+
+- HTTP techniques
+    - burpsuite proxy: observing & modifying HTTP queries in-flight
+    - GET vs POST
+    - curl: get requests, post requests, set headers w/ -H, burp w/ --proxy
+
+- apt = interface/package manager similar to homebrew
+- Burpsuite & Apt:
+    - sudo apt update
+    - sudo apt install burpsuite
+    - can also do sudo apt upgrade
+    - Burpsuite proxy tool is very cool
+        - go to browser, turn intercept on
+        - click on lock , see where request is too, click off, will switch ports, back to http from https. 
+        - http history under proxy tab
+        - can change cookies
+
+- Where are cookies?
+    - cd Library/Application\ Support/Google/Chrome
