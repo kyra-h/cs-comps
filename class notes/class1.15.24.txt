@@ -1,0 +1,20 @@
+Directory Traversal:
+http://---  -  - -/../../ . . . /etc.passwd
+
+Include vs Require
+
+
+Directory Traversal (lots more files)               Local File inclusion
+--> can we retrieve files we shouldn't, can we execute files we shouldnt?
+
+Remote File inclusion
+--> Lots more power
+
+File Upload
+--> also lots of power
+
+--> Allow treatment of url as file?
+
+
+/etc/passwd
+/etc/shadow

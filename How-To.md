@@ -1,19 +1,78 @@
 # How-To: 
-Kyra Helmbold
 
-Lots of help from Jeff Ondich
+## Basic UNIX stuff
+### networky commands
+- `ssh`
+- `openssl`
+- `nmap`
+- `ping`
+- `nc`
+- `netstat`
 
-## IP 
+### permissions
+- `chmod`
+    - chmod 644 = 110 100 100 = rw- r- -   r- - 
+- `chown`
+- `setuid` (run process as another user)
+### "normal" commands
+- `cd`
+- `ls`
+    - -l (see more info)
+    - -a (see all files, ones that start w/ a dot)
+    - -h
+- `grep`
+- `cat`
+- `find`
+- `file`
+- `vi`
+    - `vim`
+    - `:q`
+    - `:wq`
+- `echo`
+    - `echo hello | wc -c`
+    - `wc -c <<< hello` same as line above
+
+- `tr`
+- `exit`
+- `diff`
+    - `diff decrypted.txt plain.txt`
+- `man`
+### Operators?
+- `<`
+- `>`
+- `|`
+- `2>/dev/null`
+
+## GDB
+- layout:
+    - `lay asm`
+    - `lay src`
+- step through
+    - `continue` or `c`
+    - `next` or `n`
+    - `step` or `c`
+- print some things
+    - `x/20xw $rsp`
+    - get memory address of main
+        - `p main`
+    - `x/ni ADDR`
+- breaks
+    - `br main`
+    - `br 1`
+    - `br *0x...`
+
+
+## IP etc
 ### Get the computer's IP address for the current internet connection:
-- ipconfig
+- `ipconfig`
     - Lots of info
-- ipconfig getifaddr en0
+- `ipconfig getifaddr en0`
     - Just the ip address
-ifconfig
+- `ifconfig`
 - In theory…
-    - hostname –i (on kali)
-    - hostname -f (on mac)
-    - ip a
+    - `hostname –i` (on kali)
+    - `hostname -f` (on mac)
+    - `ip a`
 
 ### Determine an ip address with a hostname
 - ping \<hostname\>
@@ -26,14 +85,18 @@ ifconfig
 - nslookup \<ip\>
 - DNSlytics (a website)
 
+### See routing table:
+- `netstat -r`
+    - `netstat -rn` (take mask, mask address, with the gen mask, if ==dest, use gateway to send.)
+- arp -a ?
 
 ## Port things
 ### How to tell if a process is listening on a given port on a given host?
-- netstat -tuln | grep 80
+- `netstat -tuln | grep 80`
     - Check if process listening on a port
-- netstat -tuln | grep 80 | grep 137.22.94.116
+- `netstat -tuln | grep 80 | grep 137.22.94.116`
     - Check if a process is listening on a port on a host
--  lsof 
+-  `lsof`
     - List open files
 
 ### How can you tell which ports have processes listening on them on a given host?
@@ -68,8 +131,8 @@ ifconfig
 - ip.addr == \<ip\> and tcp.port == 80
 
 ### install burpsuite
-- sudo apt update
-- sudo apt install burpsuite
+- `sudo apt update`
+- `sudo apt install burpsuite`
 
 ## Hashing & Keys and things
 - Generate random 16-byte (32-hexadecimal-digit) key

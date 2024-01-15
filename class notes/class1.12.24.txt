@@ -1,0 +1,24 @@
+Class Friday Jan 12
+
+How passwords work:
+
+user ---(password)----> client ---(password)----> server --H(pw)--> store uname: H(pw)
+
+Better (add random # (salt)): 
+server --H(R || pw)--> store uname: R: H(R ||pw)
+stored in /etc/shadow
+
+Can run:
+hashcat, john the ripper (pw cracking agents, on kali)
+
+/usr/share/wordlists/rockyou.txt
+
+
+To go deeper:
+"process p is running as jondich"
+p status? what does it mean to be running as?
+
+what does sudo do? what does setuid do?
+-- Look @ literature
+-- Look @ source code
+-- Look @ famous bugs

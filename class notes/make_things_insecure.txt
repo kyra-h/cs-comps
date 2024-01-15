@@ -1,5 +1,6 @@
 Make things insecure:
 - set permissions wrong
+    - make files read/writable
 - openly available passwords
     - using obscurity (e.g. weird locations to store secret info)
     - put secret info in hidden files (ls -a vs ls)
@@ -11,3 +12,4 @@ Make things insecure:
     - secrets in tags and log messages
 - cron-related stuff
 - not cleaning input?
+    - SQL injections
