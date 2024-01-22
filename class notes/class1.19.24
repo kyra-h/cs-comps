@@ -1,0 +1,41 @@
+Can replace an ascii char w/ 2 digit thing in URL
+
+can replace a . with %2e
+
+Apache httpd 2.4.50 post-mortem
+    --> how do you get this version of apache???
+Apache documents: multiple/webapps/50383.sh
+searchsploit -m 50512 --> remote code execution, from www.exploit-db.com/exploits/50512
+searchsploit -m 
+
+--> exploit could be use a bad url and you win!
+--> some are great and work w/ great documentation, some are,,,, bad.
+--> lots of publically available exploits (old software etc)
+ 
+--> can leave password in file on desktop or just leave stuff around (directory traversals)
+
+- Bad (just leaving things around)
+- Passwordublically available exploits (ex apache 2.4.50)
+- Is there a way to simulate a person? (requires fooling someone to break in)
+    - phishing?
+    - XSS
+    - CSRF (?)
+
+- Pentesting methodologies:
+    - hacker-focused
+        - book.hacktricks.xyz
+            - there is a page on pentesting methodologies (very helpful!)
+        - this gets us to our goal faster :)
+
+    - more industry oriented:
+        - OWASP
+            - has a guide on how to do a pentest of a website
+        - OSSTMM
+            - extensive guidelines on how to do a pentest.
+        - NIST
+        - ISSAF
+        -MiTRE Attack
+
+
+- asset discovery is huge
+    - so many data breaches!
