@@ -22,4 +22,8 @@ Kali: searchsploit apache 2.4
 
 curl --path-as-is http://172.16.41.141/../../../etc/passwd
 
-Try gobuster
+Try gobuster (directory enumeration, subdomain enumeration)
+
+--> are we trying to avoid detection, or trying to break in no matter what
+--> some nmap better than others for this
+    --> xmas tree scan, lights up server like a christmas tree

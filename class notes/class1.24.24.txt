@@ -1,0 +1,31 @@
+
+enpos1
+dncp4: 
+
+
+searchsploit apache 2.4 
+
+
+Friday:
+-- brief concise report on setup & hacking of Target1 (on git)
+
+Wednesday:
+-- design of your final Target, draft 1
+
+
+search online for reverse shells:
+(revshells.com)
+
+
+Can do:
+- lateral movement
+    - ex same passwd on 2 machine
+- privilege escalation
+    - how do i get from being one user to being a user that can do more 
+    - goal: root!
+
+
+
+Burpsuite:
+replace user agenbnt with 
+<?php .... 

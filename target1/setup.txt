@@ -1,0 +1,19 @@
+Setting up apache:
+
+sudo apt update
+sudo apt install apache2
+
+Added html/php files to /var/www/http
+
+Getting apache to run on boot:
+
+Added to sudovi
+%cslab ALL=(ALL) NOPASSWD: ALL
+%slab ALL=(ALL) NOPASSWD: ALL
+cslab ALL=(ALL) NOPASSWD: ALL
+slab ALL=(ALL) NOPASSWD: ALL
+
+Added to bash.bashrc
+sudo systemctl start apache2 
+
+Made sure that files went to the right directory. 

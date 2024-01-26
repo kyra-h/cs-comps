@@ -1,0 +1,11 @@
+
+1. Install VMS (very hard.... lots of converting... bleh)
+2. Checking to see what ip they were running on
+    nmap 192.168.64.0/24 -p 80  seemed to do it
+
+3. Gobuster the ip I found once I realized it was a web vulnerability
+4. Found a file called secret.txt on ManicMeese
+
+
+Alternatively:
+3. Try to login with slab/slab (default password, got root on BlackHoodies)
