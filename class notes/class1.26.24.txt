@@ -1,0 +1,41 @@
+Authentication demo
+
+cs338.jeffondich.com
+--> go to burpsuite, turn intercept on. 
+
+look at burpsuite, http request.
+Requested a file, but the response is unauthorized. 
+Included header www-Authenticate (basic http authentication)
+
+--> make request for resource, could send password next time
+--> ok send password
+uname: cs338 pwd: password
+
+new header, Authorization: Baic <base64 encoding of pwd>
+
+
+
+/etc/shadow
+uname: ??? : 
+1 field separated by $
+first: what hashing alg
+
+between 2nd $ and /, there is salt
+
+just b/c you can get shadow file, doesn't mean you can get passwd . 
+
+
+if /etc/password: colons everywhere, look in shadow? 
+
+
+to make a vulnerability on this system, could change perms on /etc/password/ or /etc/shadow
+--> chmod 644 --> 666, could login as whoever, write to /etc/password, write a hash I choose to root line. Then I know password bc i wrote it!
+
+Changing password for root? Or maybe not one already?
+
+Password cracking: john, hashcat
+    - passphrase on private key
+    - passphrase on zip file
+    - passphrase on password manager vault
+    - xxx2john commands
+    - https://crackstation.net/
