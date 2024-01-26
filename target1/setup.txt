@@ -1,19 +1,15 @@
 Setting up apache:
-
 sudo apt update
 sudo apt install apache2
-
-Added html/php files to /var/www/http
-
+Added html/php files to /var/www/html
+- Inside the html there was a form in which someone could upload a file
+- no error checking for what type of file, thus people can upload any php code that will get executed by the server
 Getting apache to run on boot:
-
 Added to sudovi
 %cslab ALL=(ALL) NOPASSWD: ALL
 %slab ALL=(ALL) NOPASSWD: ALL
 cslab ALL=(ALL) NOPASSWD: ALL
 slab ALL=(ALL) NOPASSWD: ALL
-
 Added to bash.bashrc
-sudo systemctl start apache2 
-
-Made sure that files went to the right directory. 
+sudo systemctl start apache2
+Made sure that files went to the right directory.
