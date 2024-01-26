@@ -13,6 +13,7 @@ Make things insecure:
 - cron-related stuff
 - not cleaning input?
     - SQL injections
+- Cookies to say if logged in? 
 
 
 - remote code execution

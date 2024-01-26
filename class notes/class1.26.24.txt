@@ -39,3 +39,10 @@ Password cracking: john, hashcat
     - passphrase on password manager vault
     - xxx2john commands
     - https://crackstation.net/
+
+/usr/share/wordlists/rockyou.txt
+hashcat:
+-r /usr/share/hashcat/rules/rockyou-30000.rule --force
+--> rules: alternate caps, change e to 3, can hit all with rules.
+
+session keys?
