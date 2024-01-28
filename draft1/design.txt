@@ -9,6 +9,7 @@ Vulnerabilities we would be interested in including:
     - just compressed a lot
     - passwords for employees stored in a file w/ salt. 
 - Abusing sudo perms
+- Playing around w/ basic auth
 
 
 Some that we could chain together:
@@ -18,14 +19,19 @@ Some that we could chain together:
 - Once you're logged in you can see the password file? And can decode the passwords.
 
 
-- SQL injection --> logged in as specific user, use SQL injection to search a table?
+1. SQL injection --> logged in as specific user, use SQL injection to search a table?
     - what can we do with only being able to see data. (see table w/ salt and passwd)
     - SQL injection, only can do in url? 
+    - have 1 table that they're actually querying(bread)
+    - secret DB of sensitive info (frequent customer acc)
 
-- once logged in as admin group, can update cookies or something to give more perms. 
+2. once logged in as admin group, can update cookies or something to give more perms. 
+    - Or update basic auth
+    Once logged in as VIP customer, can do basic auth
 
-- update Target1 so you can only upload bad files if you're not an admin
+3. update Target1 so you can only upload bad files if you're not an admin
     - clean input if you're not a trusted user. 
+    - cleans input some if you are (ex removes .php at the end)
 
 
 Brief description of our machine/who we are:
