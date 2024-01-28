@@ -1,0 +1,21 @@
+Vulnerabilities we would be interested in including:
+- SQL injections
+- Cookies 
+- File upload attack (Target1)
+- cron-related stuff?
+- secrets in old git commits (or something like that)
+- directory traversal
+- things in plain sight
+    - just compressed a lot
+    - passwords for employees stored in a file w/ salt. 
+
+
+Some that we could chain together:
+- Cookies
+    - change cookie to say you're logged in
+    - ex. give admin perms?
+- Once you're logged in you can see the password file? And can decode the passwords.
+
+
+Brief description of our machine/who we are:
+- Kiyr is a new bakery in town! We are looking for new applications for bakers. 

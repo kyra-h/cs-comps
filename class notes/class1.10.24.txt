@@ -47,3 +47,5 @@ Class notes Jan 10 2024
 
 
 - if I go to the url, say ?user=Jeff in url. 
+
+- can make ssh key file public?
