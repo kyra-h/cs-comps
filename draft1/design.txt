@@ -8,6 +8,7 @@ Vulnerabilities we would be interested in including:
 - things in plain sight
     - just compressed a lot
     - passwords for employees stored in a file w/ salt. 
+- Abusing sudo perms
 
 
 Some that we could chain together:
@@ -17,5 +18,15 @@ Some that we could chain together:
 - Once you're logged in you can see the password file? And can decode the passwords.
 
 
+- SQL injection --> logged in as specific user, use SQL injection to search a table?
+    - what can we do with only being able to see data. (see table w/ salt and passwd)
+    - SQL injection, only can do in url? 
+
+- once logged in as admin group, can update cookies or something to give more perms. 
+
+- update Target1 so you can only upload bad files if you're not an admin
+    - clean input if you're not a trusted user. 
+
+
 Brief description of our machine/who we are:
-- Kiyr is a new bakery in town! We are looking for new applications for bakers. 
+- Kiyr is a new bakery in town! We are looking for new applications for bakers.
