@@ -1,0 +1,44 @@
+Kiyr
+
+Kiri Salij & Kyra Helmbold
+
+Our chain of vulnerabilities is as follows: SQL injection to gain a username and password. Use this username and password to login to an account with file upload permissions. Upload a reverse shell php, and then do directory traversal to get the password to root. 
+
+
+Steps:
+1. nmap the ip, and see that we have a web server running. 
+2. Go to the web server. Make an account with the email being what we plan to SQL inject. 
+3. Then, go to the account page, and look for recent orders. This is where the SQL injection happens (the first query is protected against SQL injection.)
+4. Log in as a baker, now that we've seen all the usernames and passwords. 
+5. Now we have permissions to upload files on latest_creations.php. Here, upload a web shell. 
+6. Go to this file that has been uploaded (now we have a reverse shell!)
+7. Do directory traversal to find the root password in a text file. 
+8. Login at the login page as Kiyr.
+9. We are now root!
+
+
+Current status:
+Our design is mostly working. We have a couple things we want to clean up, as well as some more complexity we would like to add. 
+
+Deeper Dive:
+We would like to dive deeper into loonytunables (buffer overflow exploit)
+
+
+Additional Notes:
+We plan on changing our chain of vulnerabilities slightly. 
+We plan to include password cracking by storing hashes of our passwords instead of just the passwords themselves. 
+
+Additionally, we plan on changing the path from wwwdata to root, by using loonytunables (https://www.hackthebox.com/blog/exploiting-the-looney-tunables-vulnerability-cve-2023-4911, https://www.uptycs.com/blog/cve-2023-4911-looney-tunables-glibc-exploit). The user will run this command in the reverse shell :
+env -i "GLIBC_TUNABLES=glibc.malloc.mxfast=glibc.malloc.mxfast=A" "Z=`printf '%08192x' 1`" /usr/bin/su --help
+
+Once they get the message: Segmentation fault (core dumped), they know our machine is vulnerable. 
+
+From here, they can save a copy of gnu-acme.py in the VM. Next, they run the script. It may take 5 -  >30 mins. This is a "noisy" exploit, which means Kiyr will be notified that this is happening. Once it works, we get a message ** ohh... looks like we got a shell? **. Now we are root!
+
+
+
+
+-- another way to upload
+-- some variants of sql allow you to write to a file
+-- this way not gettnig upgraded web account, but just uploading the file directly.
+-- 

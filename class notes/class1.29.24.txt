@@ -33,3 +33,13 @@ fuzzing: have a server, don't know what it will do, so throw a bunch at it (what
     - ex. Online app: what input can you give it to make it crash
     - gobuster: -x <php,txt,pdf> flag: try sticking php,txt, pdf at the end of everything
 
+question: you have a setuid vulnerability -- what is setuid and what is it used for etc. 
+
+some basic questions abt cookies, how sessions maintained, ... 
+
+look if there's a .git folder, if there is, you can download the whole .git folder. You have the whole history of the repo. 
+could say, one of the vulnerabilities is a .git folder that is readable. 
+    - can't see in standard index, but ...
+    - someone put in credentials, but deleted them 
+
+- to really remove old stuff so it's not in the history, there are ways but involves editing a tree

@@ -1,0 +1,30 @@
+-- Log poisoning
+-- Dirty pipe? (2022 bug)
+-- make clear how everything chains together
+    - 1 attack, now shell as Robert, another attack, now shell as admin, again, now Root
+
+focus more on SQL injection
+DB management systems: mysql, postgresql, mariadb, mangodb, etc.
+- some allow you to write to the file system w/ a sql command
+- some allow you to launch a shell and execute a command w/ SQL
+
+imagine someone doing something like:
+
+$query = 'SELECT * FROM users where name = '$name' and pw = '$pw'";
+(stupid, can just use ')
+
+make it easy for SQL to fail, but hard to actually get info
+
+ERR based SQL injection,
+    - send err to browser
+
+Timing based attacks;
+    - if guessed right, takes a long time to respond (~3s)
+    - if guessed wrong, takes milliseconds to respond
+
+Union based attack, blind attack, etc. 
+
+
+
+-- could also look into persistence
+    - can use systemctl 
