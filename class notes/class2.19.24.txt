@@ -1,0 +1,13 @@
+For poster session:
+
+SQL
+- line of php that’s vulnerable
+- show what happens when user executes malicious code. 
+- Visually show how one query becomes multiple, one of which is malicious.
+LoonyTunables
+- link to cve
+- talk abt buffer overflow?
+
+
+Make QR code with link to a github with the links of all of our references. 
+
