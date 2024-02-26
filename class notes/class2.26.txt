@@ -1,0 +1,16 @@
+nginx (larger market share than apache)
+	- for serving off of linux servers
+	- config file
+	- if thing named .git, deny all (not default, must put in)
+
+
+- in text links for online resources.
+- in paper, diagrams 
+- assume pictures / screenshots taking up some space
+    - natural organization:	
+        - lay landscape
+        - here’s what attacker should do
+            - dead ends or not. 
+    - not >20 pages 
+    - more than 8. 8-12 pages, due at end of finals. 
+    - use headings, link to table of contents. 
