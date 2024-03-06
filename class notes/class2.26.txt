@@ -14,3 +14,4 @@ nginx (larger market share than apache)
     - not >20 pages 
     - more than 8. 8-12 pages, due at end of finals. 
     - use headings, link to table of contents. 
+- practitioner tone, not academic paper tone (like hackthebox style)
