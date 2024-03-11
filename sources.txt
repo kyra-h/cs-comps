@@ -1,0 +1,57 @@
+General Setup
+https://www.w3schools.com/CSS/css_howto.asp 
+https://html-tuts.com/create-a-banner-with-html-and-css-the-easy-way/ 
+https://www.w3schools.com/html/ 
+https://stackoverflow.com/questions/33014470/unable-to-install-apache2 
+https://stackoverflow.com/questions/470617/how-do-i-get-the-current-date-and-time-in-php 
+https://stackoverflow.com/questions/20738329/how-to-call-a-php-function-on-the-click-of-a-button 
+https://stackoverflow.com/questions/5468606/ubuntu-apache-how-to-start-automatically-apache-at-boot 
+https://nikitahl.com/custom-styled-input-type-file 
+https://cs.carleton.edu/faculty/jondich/courses/comps_w24/index.html 
+https://stackoverflow.com/questions/1648665/changing-the-symbols-shown-in-a-html-password-field 
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_border 
+
+SQL Injection
+https://www.w3schools.com/sql/ 
+https://stackoverflow.com/questions/2647/how-do-i-split-a-delimited-string-so-i-can-access-individual-items 
+https://stackoverflow.com/questions/12313233/passing-php-variable-to-sql-query 
+https://stackoverflow.com/questions/11378704/mysql-apostrophes-errors?rq=3 
+https://stackoverflow.com/questions/43497587/how-to-display-postgresql-search-results-using-php
+https://www.w3schools.com/sql/sql_injection.asp  
+
+File Upload Attack
+https://www.w3schools.com/howto/howto_html_file_upload_button.asp 
+https://www.w3schools.com/php/php_file_upload.asp 
+https://www.w3schools.com/PHP/func_string_substr.asp 
+https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html 
+
+Loony Tunables
+Info:
+https://www.geeksforgeeks.org/static-and-dynamic-loader-in-operating-system/   
+https://blog.qualys.com/vulnerabilities-threat-research/2023/10/03/cve-2023-4911-looney-tunables-local-privilege-escalation-in-the-glibcs-ld-so  
+https://www.qualys.com/2023/10/03/cve-2023-4911/looney-tunables-local-privilege-escalation-glibc-ld-so.txt  
+https://www.hackthebox.com/blog/exploiting-the-looney-tunables-vulnerability-cve-2023-4911 
+https://codebrowser.dev/glibc/glibc/elf/dl-tunables.c.html#245 
+https://codebrowser.dev/glibc/glibc/elf/dl-object.c.html 
+https://codebrowser.dev/glibc/glibc/misc/sbrk.c.html 
+https://codebrowser.dev/glibc/glibc/elf/dl-minimal-malloc.c.html#__minimal_malloc (minimal_malloc)
+https://tryhackme.com/room/looneytunes 
+https://www.uptycs.com/blog/cve-2023-4911-looney-tunables-glibc-exploit 
+https://nvd.nist.gov/vuln/detail/CVE-2023-4911 
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/developer_guide/compiling-build-id 
+https://sourceware.org/pipermail/glibc-cvs/2021q2/072787.html 
+https://man7.org/linux/man-pages/man8/ld.so.8.html 
+https://stackoverflow.com/questions/53156275/difference-between-dynamic-dynsym-and-dynstr-in-an-elf-executable 
+https://www.bleepingcomputer.com/news/security/cisa-orders-federal-agencies-to-patch-looney-tunables-linux-bug/ 
+https://codebrowser.dev/glibc/glibc/misc/sbrk.c.html 
+Setup: 
+https://stackoverflow.com/questions/72513993/how-to-install-glibc-2-29-or-higher-in-ubuntu-18-04 
+https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host/851229#851229  
+https://askubuntu.com/questions/1500315/how-can-i-use-a-later-version-of-gcc-than-the-system-runtimes-support-can-softw 
+https://stackoverflow.com/questions/71940179/error-lib-x86-64-linux-gnu-libc-so-6-version-glibc-2-34-not-found 
+https://stackoverflow.com/questions/2856438/how-can-i-link-to-a-specific-glibc-version 
+Exploits:
+https://haxx.in/files/gnu-acme.py 
+https://github.com/leesh3288/CVE-2023-4911 
+https://github.com/KernelKrise/CVE-2023-4911/blob/main/poc.py 
+https://github.com/chaudharyarjun/LooneyPwner 
